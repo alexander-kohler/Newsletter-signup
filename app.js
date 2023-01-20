@@ -5,6 +5,8 @@ const https = require('https')
 
 const app = express()
 
+const apiKey = API_KEY
+
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
 
@@ -37,7 +39,7 @@ app.post('/signup', (req, res) =>{
 
     const options = {
         method: "POST",
-        auth: "bluetrack:ff30d94a63e3356d7771ea057a4dcbde-us21"
+        auth: "bluetrack:apiKey"
     }
 
     const request = https.request(url, options, function(response){
