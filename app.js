@@ -5,7 +5,7 @@ const https = require('https')
 
 const app = express()
 
-const apiKey = API_KEY
+const apiKey = process.env.API_KEY
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
